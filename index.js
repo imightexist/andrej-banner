@@ -24,8 +24,9 @@ ws.on('connect',function(f){
     f.sendUTF(encodeCommand(['admin','2',pass]));
     
     if (cmd[0] == "chat"){
+      cmd[2].toLowerCase();
       //i love jjjj
-      if (cmd[2].includes("I LOVE JJJJ")){
+      if (cmd[2].includes("i love jjjj")){
         msg();
         ban(cmd[1]);
       }
@@ -47,21 +48,13 @@ ws.on('connect',function(f){
         msg();
         ban(cmd[1]);
       }
-      if (cmd[2].includes("IEXIST GAY")){
-        msg();
-        ban(cmd[1]);
-      }
-      if (cmd[2].includes("IEXIST IS GAY")){
-        msg();
-        ban(cmd[1]);
-      }
       //i made u
-      if (cmd[2].includes("I MADE U")){
+      if (cmd[2].includes("i made u")){
         msg();
         ban(cmd[1]);
       }
       //i made underfishin
-      if (cmd[2].includes("I MADE UNDERFISHIN")){
+      if (cmd[2].includes("i made underfishin")){
         msg();
         ban(cmd[1]);
       }
@@ -70,13 +63,9 @@ ws.on('connect',function(f){
         msg();
         ban(cmd[1]);
       }
-      
-      if (cmd[2].includes("IS FECES")){
-        msg();
-        ban(cmd[1]);
-      }
     }
     if (cmd[0] == "remuser"){
+      cmd[2].toLowerCase();
       if (cmd[2].includes("jjjj")){
         msg();
         ban(cmd[2]);
@@ -91,6 +80,7 @@ ws.on('connect',function(f){
       }
     }
     if (cmd[0] == "rename"){
+      cmd[3].toLowerCase();
       if (cmd[3].includes("jjjj")){
         msg();
         ban(cmd[3]);
