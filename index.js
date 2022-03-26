@@ -1,12 +1,14 @@
 const websocketClient = require('websocket').client;
 const ws = new websocketClient();
 const config = require('./config.json');
+name;
 if (config.guestName){
 	let randomNumber = Math.floor(Math.random() * 98999) + 1000;
-	const name = "guest" + randomNumber.toString();
+	name = "guest" + randomNumber.toString();
 }else{
-	const name = config.name;
+	name = config.name;
 }
+const name = name;
 const address = config.vmAddress;
 const pass = config.password;
 const bannedPhrases = ['i love jjjj','your sister gay','your sister is gay','iexist gay','iexist is gay','i made u','i made underfishin','is feces'];
@@ -32,6 +34,11 @@ ws.on('connect',function(f){
     
     if (cmd[0] == "chat"){
       var txt = cmd[2].toLowerCase();
+      if (bannedPhrases.includes(txt)){
+	    msg();
+	    ban(cmd[1]);
+      }
+      /*
       //i love jjjj
       if (txt.includes("i love jjjj")){
         msg();
@@ -70,9 +77,15 @@ ws.on('connect',function(f){
         msg();
         ban(cmd[1]);
       }
+      */
     }
     if (cmd[0] == "remuser"){
       var uname = cmd[2].toLowerCase();
+      if (bannedNames.includes(uname)){
+	    msg();
+	    ban(cmd[2]);
+      }
+      /*
       if (uname.includes("jjjj")){
         msg();
         ban(cmd[2]);
@@ -85,9 +98,15 @@ ws.on('connect',function(f){
         msg();
         ban(cmd[2]);
       }
+      */
     }
     if (cmd[0] == "rename"){
       var uname2 = cmd[3].toLowerCase();
+      if (bannedPhrases.includes(uname2)){
+	    msg();
+	    ban(cmd[3]);
+      }
+      /*
       if (uname2.includes("jjjj")){
         msg();
         ban(cmd[3]);
@@ -100,6 +119,7 @@ ws.on('connect',function(f){
         msg();
         ban(cmd[3]);
       }
+      */
     }
     
     
