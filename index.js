@@ -24,37 +24,37 @@ ws.on('connect',function(f){
     f.sendUTF(encodeCommand(['admin','2',pass]));
     
     if (cmd[0] == "chat"){
-      cmd[2].toLowerCase();
+      var txt = cmd[2].toLowerCase();
       //i love jjjj
-      if (cmd[2].includes("i love jjjj")){
+      if (txt.includes("i love jjjj")){
         msg();
         ban(cmd[1]);
       }
       //your sister gay
-      if (cmd[2].includes("your sister gay")){
+      if (txt.includes("your sister gay")){
         msg();
         ban(cmd[1]);
       }
-      if (cmd[2].includes("your sister is gay")){
+      if (txt.includes("your sister is gay")){
         msg();
         ban(cmd[1]);
       }
       //iexist gay
-      if (cmd[2].includes("iexist gay")){
+      if (txt.includes("iexist gay")){
         msg();
         ban(cmd[1]);
       }
-      if (cmd[2].includes("iexist is gay")){
+      if (txt.includes("iexist is gay")){
         msg();
         ban(cmd[1]);
       }
       //i made u
-      if (cmd[2].includes("i made u")){
+      if (txt.includes("i made u")){
         msg();
         ban(cmd[1]);
       }
       //i made underfishin
-      if (cmd[2].includes("i made underfishin")){
+      if (txt.includes("i made underfishin")){
         msg();
         ban(cmd[1]);
       }
@@ -65,31 +65,31 @@ ws.on('connect',function(f){
       }
     }
     if (cmd[0] == "remuser"){
-      cmd[2].toLowerCase();
-      if (cmd[2].includes("jjjj")){
+      var uname = cmd[2].toLowerCase();
+      if (uname.includes("jjjj")){
         msg();
         ban(cmd[2]);
       }
-      if (cmd[2].includes("bbbb")){
+      if (uname.includes("bbbb")){
         msg();
         ban(cmd[2]);
       }
-      if (cmd[2].includes("nina005")){
+      if (uname.includes("nina005")){
         msg();
         ban(cmd[2]);
       }
     }
     if (cmd[0] == "rename"){
-      cmd[3].toLowerCase();
-      if (cmd[3].includes("jjjj")){
+      var uname2 = cmd[3].toLowerCase();
+      if (uname2.includes("jjjj")){
         msg();
         ban(cmd[3]);
       }
-      if (cmd[3].includes("bbbb")){
+      if (uname2.includes("bbbb")){
         msg();
         ban(cmd[3]);
       }
-      if (cmd[3].includes("nina005")){
+      if (uname2.includes("nina005")){
         msg();
         ban(cmd[3]);
       }
