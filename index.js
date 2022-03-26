@@ -9,6 +9,8 @@ if (config.guestName){
 }
 const address = config.vmAddress;
 const pass = config.password;
+const bannedPhrases = ['i love jjjj','your sister gay','your sister is gay','iexist gay','iexist is gay','i made u','i made underfishin','is feces'];
+const bannedNames = ['jjjj','bbbb','nina005'];
 
 ws.on('connect',function(f){
   function send(str){
