@@ -1,7 +1,12 @@
 const websocketClient = require('websocket').client;
 const ws = new websocketClient();
 const config = require('./config.json');
-const name = config.name;
+if (config.guestName){
+	let randomNumber = Math.floor(Math.random() * 98999) + 1000;
+	const name = "guest" + randomNumber.toString();
+}else{
+	const name = config.name;
+}
 const address = config.vmAddress;
 const pass = config.password;
 
