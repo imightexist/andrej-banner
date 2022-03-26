@@ -18,7 +18,7 @@ haha idiot heres a quick tutorial on how to start this up
 6. Run "npm install websocket"
 7. After it's done, run "node index.js"
 
-If nodejs is already installed just do steps 4, 5, and 7.
+If nodejs and websocket is already installed just do steps 4, 5, and 7.
 ## Linux
 1. Install nodejs and npm using your package manager
 2. Download this repository
@@ -26,4 +26,4 @@ If nodejs is already installed just do steps 4, 5, and 7.
 4. Run "npm install websocket"
 5. After it's done, run "node index.js"
 
-If nodejs is already installed just do steps 3 and 5.
+If nodejs and websocket is already installed just do steps 3 and 5.
