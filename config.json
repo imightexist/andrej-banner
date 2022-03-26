@@ -2,5 +2,7 @@
   "password":"collabvm",
   "vmAddress":"127.0.0.1:6004",
   "name":"asdfaaasdf",
-  "guestName":true
+  "guestName":true,
+  "bannedPhrases":['i love jjjj','your sister gay','your sister is gay','iexist gay','iexist is gay','i made u','i made underfishin','is feces'],
+  "bannedNames":['jjjj','bbbb','nina005']
 }
