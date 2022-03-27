@@ -1,15 +1,9 @@
 const websocketClient = require('websocket').client;
 const ws = new websocketClient();
 const config = require('./config.json');
-name;
-if (config.guestName){
-	let randomNumber = Math.floor(Math.random() * 98999) + 1000;
-	name = "guest" + randomNumber.toString();
-}else{
-	name = config.name;
-}
-const name = name;
+//const name = name;
 const address = config.vmAddress;
+
 const pass = config.password;
 const bannedPhrases = ['i love jjjj','your sister gay','your sister is gay','iexist gay','iexist is gay','i made u','i made underfishin','is feces','is faggot food'];
 const bannedNames = ['jjjj','bbbb','nina005'];
@@ -29,7 +23,13 @@ ws.on('connect',function(f){
   }
   f.on('message',function(msg){
     cmd = decodeCommand(msg.utf8Data);
-    rename(name);
+    //rename(name);
+    if (config.guestName){
+      let randomNumber = Math.floor(Math.random() * 98999) + 1000;
+      rename("guest" + randomNumber.toString());
+    }else{
+      rename(config.name);
+    }
     f.sendUTF(encodeCommand(['admin','2',pass]));
     
     if (cmd[0] == "chat"){
