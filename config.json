@@ -2,5 +2,5 @@
   "password":"collabvm",
   "vmAddress":"127.0.0.1:6004",
   "name":"asdfaaasdf",
-  "guestName":true,
+  "guestName":true
 }
