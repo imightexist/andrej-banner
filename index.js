@@ -102,7 +102,7 @@ ws.on('connect',function(f){
     }
     if (cmd[0] == "rename"){
       var uname2 = cmd[3].toLowerCase();
-      if (bannedPhrases.includes(uname2)){
+      if (bannedNames.includes(uname2)){
 	    msg();
 	    ban(cmd[3]);
       }
