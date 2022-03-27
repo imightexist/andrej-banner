@@ -21,15 +21,16 @@ ws.on('connect',function(f){
   function msg(){
     send("likely andrej detected.");
   }
+  if (config.guestName){
+    let randomNumber = Math.floor(Math.random() * 98999) + 1000;
+    rename("guest" + randomNumber.toString());
+  }else{
+    rename(config.name);
+  }
   f.on('message',function(msg){
     cmd = decodeCommand(msg.utf8Data);
     //rename(name);
-    if (config.guestName){
-      let randomNumber = Math.floor(Math.random() * 98999) + 1000;
-      rename("guest" + randomNumber.toString());
-    }else{
-      rename(config.name);
-    }
+    
     f.sendUTF(encodeCommand(['admin','2',pass]));
     
     if (cmd[0] == "chat"){
